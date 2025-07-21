@@ -1,4 +1,4 @@
-// Nama File: ThemeSwitcher.tsx
+
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState('light')
 
-  // Cek tema saat komponen pertama kali dimuat
+
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light'
     setTheme(savedTheme)
@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'
     setTheme(newTheme)
-    localStorage.setItem('theme', newTheme) // Simpan pilihan pengguna
+    localStorage.setItem('theme', newTheme) 
 
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark')
